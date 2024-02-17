@@ -4,7 +4,9 @@
   "version": "15.0.0",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "prepare": "husky install"
+    "prepublish": "npm run build",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
