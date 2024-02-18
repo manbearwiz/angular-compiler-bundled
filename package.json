@@ -1,9 +1,9 @@
 {
   "name": "angular-compiler-bundled",
-  "description": "@angular/compiler bundled with rollup to css",
+  "description": "@angular/compiler bundled to cjs with esbuild to allow import via require",
   "version": "15.0.0",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
+    "build": "esbuild ./src/index.ts --bundle --platform=node --target=node18 --outfile=dist/index.js && tsc",
     "prepublish": "npm run build",
     "prepare": "husky install",
     "semantic-release": "semantic-release"
@@ -21,21 +21,13 @@
   "devDependencies": {
     "@angular/compiler": "^15.0.0",
     "@biomejs/biome": "1.5.3",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.6",
+    "esbuild": "0.20.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.2",
-    "rollup": "^4.12.0",
     "semantic-release": "^23.0.2"
   },
-  "type": "module",
   "types": "./dist/types/index.d.ts",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.cjs"
-  },
+  "main": "./dist/index.js",
   "files": [
     "/dist"
   ],

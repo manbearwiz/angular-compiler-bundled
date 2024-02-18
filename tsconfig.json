@@ -2,8 +2,9 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "lib": ["es2019"],
-    "target": "es6",
     "declaration": true,
-    "declarationDir": "dist/types"
-  }
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": true
+  },
+  "files": ["src/index.ts"],
 }
