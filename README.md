@@ -1,3 +1,7 @@
+# Deprecated
+
+Most of the functionality in this package is now available in [@angular-eslint/bundled-angular-compiler](https://www.npmjs.com/package/@angular-eslint/bundled-angular-compiler).
+
 # angular-compiler-bundled
 
 ## Introduction
